@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "version": "v4.0",
+    "generated_at": "2025-12-07T19:44:32.471978",
+    "algorithm": "Discrete-Time Hazard (Logistic)",
+    "n_features": 18,
+    "features": [
+      "collections_12_mths_ex_med",
+      "avg_cur_bal",
+      "tot_cur_bal",
+      "tot_hi_cred_lim",
+      "bc_open_to_buy",
+      "dti",
+      "annual_inc",
+      "loan_amnt",
+      "acc_open_past_24mths",
+      "num_tl_30dpd",
+      "delinq_2yrs",
+      "pub_rec",
+      "mths_since_recent_bc",
+      "credit_utilization_ratio",
+      "income_to_loan_ratio",
+      "has_collections",
+      "has_delinq_history",
+      "has_public_record"
+    ],
+    "segments": [
+      "low_risk",
+      "medium_risk",
+      "high_risk"
+    ]
+  },
+  "coefficients": {
+    "low_risk": {
+      "month_age": 0.5554569207448056,
+      "month_sq": -0.024897839892750896,
+      "month_cu": 0.00036813725159298233,
+      "collections_12_mths_ex_med": 0.5548385692529321,
+      "avg_cur_bal": 6.042908986835426e-06,
+      "tot_cur_bal": -1.8059656195229347e-07,
+      "tot_hi_cred_lim": -1.5060951449494924e-06,
+      "bc_open_to_buy": -9.74636353302178e-06,
+      "dti": 0.011313331438559067,
+      "annual_inc": -1.8726500834220574e-06,
+      "loan_amnt": 4.492853100045144e-06,
+      "acc_open_past_24mths": 0.10525680858918063,
+      "num_tl_30dpd": -0.697645698479364,
+      "delinq_2yrs": 0.06957433730497047,
+      "pub_rec": 0.06584785865333198,
+      "mths_since_recent_bc": -0.004177042824702147,
+      "credit_utilization_ratio": 0.09910354061150004,
+      "income_to_loan_ratio": -0.01201407197266565,
+      "has_collections": -0.7774617219846607,
+      "has_delinq_history": -4.790553558163569,
+      "has_public_record": -4.79055355816354
+    },
+    "medium_risk": {
+      "month_age": 0.5465370280248643,
+      "month_sq": -0.025829092362359998,
+      "month_cu": 0.0003855643878296865,
+      "collections_12_mths_ex_med": -0.7333850649668333,
+      "avg_cur_bal": 6.351331219674322e-06,
+      "tot_cur_bal": 3.3210990535589775e-06,
+      "tot_hi_cred_lim": -4.9118377786968936e-06,
+      "bc_open_to_buy": 4.449978138215841e-06,
+      "dti": 0.008668498569626277,
+      "annual_inc": 7.183080648920539e-07,
+      "loan_amnt": -7.639142428711965e-07,
+      "acc_open_past_24mths": 0.08109517202314964,
+      "num_tl_30dpd": 0.24667466454827075,
+      "delinq_2yrs": 0.05114184598866959,
+      "pub_rec": 0.01252756094243722,
+      "mths_since_recent_bc": -0.0030168395488088333,
+      "credit_utilization_ratio": 0.24198445323793247,
+      "income_to_loan_ratio": -0.023345414802940667,
+      "has_collections": 0.9773133433881043,
+      "has_delinq_history": -4.744257173232434,
+      "has_public_record": -4.7442571732324526
+    },
+    "high_risk": {
+      "month_age": 0.58389926135462,
+      "month_sq": -0.03016362485012843,
+      "month_cu": 0.00047348648138279757,
+      "collections_12_mths_ex_med": -19.323063068733664,
+      "avg_cur_bal": 5.050929250602644e-06,
+      "tot_cur_bal": 7.688455185274721e-06,
+      "tot_hi_cred_lim": -7.198578064119371e-06,
+      "bc_open_to_buy": 2.500528783735133e-06,
+      "dti": 0.017163362607164293,
+      "annual_inc": 2.083410051415595e-06,
+      "loan_amnt": -7.32795354109216e-06,
+      "acc_open_past_24mths": 0.05311628491393667,
+      "num_tl_30dpd": 1.3434839929424147,
+      "delinq_2yrs": -0.030094983543513205,
+      "pub_rec": -0.021777939597024405,
+      "mths_since_recent_bc": -0.003397973396106984,
+      "credit_utilization_ratio": -0.4067849731370642,
+      "income_to_loan_ratio": -0.029430412282162744,
+      "has_collections": 19.41036965622186,
+      "has_delinq_history": -3.7578311337012815,
+      "has_public_record": -3.7578311337011177
+    }
+  },
+  "macro_overlay": {
+    "baseline_unemployment": 0.04,
+    "sensitivity": 4.0,
+    "note": "Macro is SEPARATE layer, not in model formula"
+  },
+  "lgd": {
+    "low_risk": 0.65,
+    "medium_risk": 0.7,
+    "high_risk": 0.75
+  },
+  "portfolio_summary": {
+    "total_loans": 61458,
+    "total_exposure": 767412700,
+    "weighted_pd": 0.1357
+  },
+  "segment_pds": {
+    "low_risk": 0.0885,
+    "medium_risk": 0.19591819452089596,
+    "high_risk": 0.29318968834166986
+  }
+}
